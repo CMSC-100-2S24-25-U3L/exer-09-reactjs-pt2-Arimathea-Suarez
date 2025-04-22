@@ -1,0 +1,398 @@
+/* Arimathea Charmille H. Suarez*/
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #f9f9f9;
+}
+
+/* Code font */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #ff6c00; /* Lazada's signature orange color */
+  color: white;
+  flex-wrap: wrap;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.la {
+  color: blue;
+}
+
+.za {
+  color: white;
+}
+
+.do {
+  color: rgba(0, 0, 0, 0.948);
+}
+
+.search-bar {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures the nav items wrap on smaller screens */
+}
+
+nav a {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px 0;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: blue; /* Blue background on hover */
+  color: white; /* White text color on hover */
+}
+
+nav a:active {
+  background-color: darkblue; /* Dark blue background when the link is clicked */
+  color: white; /* White text color when clicked */
+}
+
+/* Product List */
+.product-list {
+  display: grid; /* Changed to grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 15px; /* Consistent gap */
+  padding: 15px; /* Added padding around the list */
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Increased padding */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image {
+  background-color: #ddd;
+  height: 150px; /* Adjusted height */
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.product-card h3 {
+  font-size: 16px; /* Adjusted font size */
+  font-weight: bold;
+  margin-bottom: 8px; /* Adjusted margin */
+  text-align: center; /* Center the title */
+}
+
+.product-card p {
+  color: #ff6c00;
+  font-size: 14px; /* Adjusted font size */
+  margin-bottom: 8px; /* Adjusted margin */
+  text-align: center; /* Center the price */
+}
+
+.add-to-cart {
+  padding: 8px 15px; /* Adjusted padding */
+  background-color: #ff6c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px; /* Adjusted font size */
+  transition: background-color 0.3s ease;
+  width: 80%; /* Make the button narrower */
+}
+
+.add-to-cart:hover {
+  background-color: #e55c00;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; /* Added some top margin to separate from content */
+}
+
+.footer a {
+  color: #ccc;
+  font-size: 14px;
+  margin: 5px 10px; /* Adjusted margin */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px; /* Adjusted padding */
+  }
+
+  .header h2 {
+    font-size: 22px; /* Adjusted font size */
+    margin-bottom: 10px; /* Added margin */
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 15px; /* Added margin */
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+    gap: 10px; /* Adjusted gap */
+  }
+
+  nav a {
+    padding: 8px 12px; /* Adjusted padding */
+    font-size: 14px; /* Adjusted font size */
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller min width */
+    gap: 10px; /* Adjusted gap */
+    padding: 10px; /* Adjusted padding */
+  }
+
+  .product-card {
+    padding: 10px; /* Adjusted padding */
+  }
+
+  .product-image {
+    height: 120px; /* Adjusted height */
+    margin-bottom: 8px; /* Adjusted margin */
+  }
+
+  .product-card h3 {
+    font-size: 14px; /* Adjusted font size */
+    margin-bottom: 5px; /* Adjusted margin */
+  }
+
+  .product-card p {
+    font-size: 12px; /* Adjusted font size */
+    margin-bottom: 5px; /* Adjusted margin */
+  }
+
+  .add-to-cart {
+    padding: 6px 10px; /* Adjusted padding */
+    font-size: 12px; /* Adjusted font size */
+    width: 90%; /* Slightly wider on smaller screens */
+  }
+
+  .footer {
+    padding: 15px 20px; /* Adjusted padding */
+  }
+
+  .footer a {
+    margin: 5px; /* Adjusted margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 20px; /* Further adjusted font size */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Further adjusted gap */
+  }
+
+  nav a {
+    width: 100%; /* Full width navigation links on very small screens */
+    margin: 2px 0; /* Adjusted margin */
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Even smaller min width */
+    gap: 8px; /* Further adjusted gap */
+    padding: 8px; /* Further adjusted padding */
+  }
+
+  .product-card {
+    padding: 8px; /* Further adjusted padding */
+  }
+
+  .product-image {
+    height: 100px; /* Further adjusted height */
+    margin-bottom: 5px; /* Further adjusted margin */
+  }
+
+  .product-card h3 {
+    font-size: 12px; /* Further adjusted font size */
+    margin-bottom: 3px; /* Further adjusted margin */
+  }
+
+  .product-card p {
+    font-size: 10px; /* Further adjusted font size */
+    margin-bottom: 3px; /* Further adjusted margin */
+  }
+
+  .add-to-cart {
+    font-size: 10px; /* Further adjusted font size */
+    padding: 5px 8px; /* Further adjusted padding */
+  }
+
+  .footer {
+    padding: 10px 15px; /* Further adjusted padding */
+  }
+
+  .footer a {
+    font-size: 12px; /* Adjusted font size */
+  }
+}
+
+/* Cart Styles */
+/* App.css or index.css */
+
+/* ... other styles ... */
+
+.cart-container {
+  width: 320px; /* Adjusted width */
+  padding: 25px; /* More padding */
+  background: #f9f9f9; /* Light grey background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  border-radius: 12px; /* More rounded corners */
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.cart-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.cart-list {
+  padding: 0;
+  list-style: none;
+}
+
+.empty-cart-message {
+  text-align: center;
+  padding: 15px;
+  color: #777;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px; /* Slightly more margin */
+  padding: 12px; /* More padding */
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  background: #fff; /* White background for items */
+}
+
+.item-name {
+  color: #555;
+  font-weight: 500;
+}
+
+.remove-button {
+  background: #dc3545; /* Standard red for delete */
+  color: white;
+  border: none;
+  padding: 8px 12px; /* More padding */
+  border-radius: 6px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 0.9em; /* Slightly smaller font */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.cart-total {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #333;
+  text-align: right; /* Align total to the right */
+}
+
+.total-count {
+  color: #007bff;
+}
